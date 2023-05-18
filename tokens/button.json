@@ -1,0 +1,14 @@
+{
+  "button": {
+    "bg": {
+      "color": {
+        "value": "{bg.default.color}",
+        "type": "color"
+      }
+    },
+    "borderRadius": {
+      "value": "{borderRadius.default}",
+      "type": "borderRadius"
+    }
+  }
+}
