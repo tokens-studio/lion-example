@@ -1,0 +1,18 @@
+{
+  "name": "lion-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lion/ui": "^0.2.2",
+    "@tokens-studio/sd-transforms": "^0.9.1",
+    "lit": "^2.7.4",
+    "style-dictionary": "^3.8.0"
+  }
+}
