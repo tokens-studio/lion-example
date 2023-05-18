@@ -1,12 +1,11 @@
 import { LionButtonSubmit } from "@lion/ui/button.js";
 import { css } from "lit";
-import styles from "./button-casual-green.css" assert { type: "css" };
+import { adjustAdoptedStylesheetsMixin } from "../adjustAdoptedStylesheetsMixin.js";
 
-class TokButton extends LionButtonSubmit {
+class TokButton extends adjustAdoptedStylesheetsMixin(LionButtonSubmit) {
   static get styles() {
     return [
       ...super.styles,
-      styles,
       css`
         :host {
           background: var(--button-bg-color);
@@ -20,6 +19,11 @@ class TokButton extends LionButtonSubmit {
         }
       `,
     ];
+  }
+
+  constructor() {
+    super();
+    this.component = "button";
   }
 }
 
