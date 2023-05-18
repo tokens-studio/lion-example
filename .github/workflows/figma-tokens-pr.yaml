@@ -1,0 +1,30 @@
+name: Process Figma Tokens PR
+
+on: pull_request
+
+jobs:
+  run_if: # only if base branch is "figma-tokens"
+    if: ${{ github.head_ref == 'figma-tokens' }}
+    name: Process Figma Tokens
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # checkout to the head of this PR
+      - uses: actions/checkout@master
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run style-dictionary
+        run: npm run build:tokens
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Joren Broekema
+          author_email: joren.broekema@gmail.com
+          message: "chore: style-dictionary output"
+          add: "."
