@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ff04d8b99db8cddbaaceac800e10e106118ccdcf",
+    "name": "Casual-Green",
+    "selectedTokenSets": {
+      "core": "source",
+      "button": "enabled",
+      "casual": "enabled",
+      "green": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  },
+  {
+    "id": "e6dd916d4cb30ccace7631035ac91c98ea5960eb",
+    "name": "Casual-Blue",
+    "selectedTokenSets": {
+      "core": "source",
+      "button": "enabled",
+      "casual": "enabled",
+      "blue": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  },
+  {
+    "id": "a9dc2652a4c8db0771643fdf7fe49da5371e701f",
+    "name": "Casual-Purple",
+    "selectedTokenSets": {
+      "core": "source",
+      "button": "enabled",
+      "casual": "enabled",
+      "purple": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  },
+  {
+    "id": "a5f1a80583b637eca895552839876362f5e818a6",
+    "name": "Business-Green",
+    "selectedTokenSets": {
+      "core": "source",
+      "button": "enabled",
+      "business": "enabled",
+      "green": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  },
+  {
+    "id": "593e2eaef36149af6ae4c8ee48adb6eb7f7bba54",
+    "name": "Business-Blue",
+    "selectedTokenSets": {
+      "core": "source",
+      "button": "enabled",
+      "business": "enabled",
+      "blue": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  },
+  {
+    "id": "c1f070fa533ba3da65750113ffd724ea7f0876ef",
+    "name": "Business-Purple",
+    "selectedTokenSets": {
+      "core": "source",
+      "button": "enabled",
+      "business": "enabled",
+      "purple": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  }
+]

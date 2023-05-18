@@ -1,0 +1,10 @@
+{
+  "bg": {
+    "default": {
+      "color": {
+        "value": "{colors.blue.600}",
+        "type": "color"
+      }
+    }
+  }
+}
