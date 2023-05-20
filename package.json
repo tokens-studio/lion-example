@@ -4,9 +4,10 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build:demo": "rimraf dist && rollup -c rollup.config.js",
     "build:tokens": "node build-tokens.cjs",
-    "demo": "wds --open --watch --node-resolve"
+    "demo:dev": "wds --open --watch --node-resolve",
+    "demo:build": "rimraf dist && rollup -c rollup.config.js",
+    "demo:start": "http-server -o -c-1 dist"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +23,8 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@web/dev-server": "^0.2.1",
     "@web/rollup-plugin-html": "^2.0.0",
-    "acorn-import-assertions": "^1.9.0",
     "rimraf": "^5.0.1",
     "rollup": "^3.22.0",
-    "rollup-plugin-import-assert": "^3.0.1"
+    "rollup-plugin-import-css": "^3.2.1"
   }
 }
