@@ -2,7 +2,7 @@
   "bg": {
     "default": {
       "color": {
-        "value": "{colors.purple.600}",
+        "value": "{colors.blue.600}",
         "type": "color"
       }
     }
