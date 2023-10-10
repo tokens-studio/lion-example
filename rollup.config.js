@@ -8,7 +8,6 @@ export default {
   output: { dir: "dist" },
   plugins: [
     nodeResolve(),
-    // see https://github.com/rollup/plugins/issues/1503
     // if we put modules to true, we force CSSStyleSheet (rather than CSS String)
     // Once the issue above is solved, the use of this option can be removed
     css({ modules: true }),

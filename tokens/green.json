@@ -1,9 +1,11 @@
 {
-  "bg": {
-    "default": {
-      "color": {
-        "value": "{colors.green.600}",
-        "type": "color"
+  "colors": {
+    "bg": {
+      "default": {
+        "color": {
+          "value": "{colors.green.600}",
+          "type": "color"
+        }
       }
     }
   }

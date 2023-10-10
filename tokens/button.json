@@ -2,7 +2,7 @@
   "button": {
     "bg": {
       "color": {
-        "value": "{bg.default.color}",
+        "value": "{colors.bg.default.color}",
         "type": "color"
       }
     },
