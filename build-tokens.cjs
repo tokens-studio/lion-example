@@ -12,11 +12,18 @@ StyleDictionary.registerTransformGroup({
   transforms: [...transforms, "attribute/cti", "name/cti/kebab"],
 });
 
-const tokenFilter = (cat) => (token) => token.attributes.category === cat;
+// filters only tokens originating from core.json
+const coreFilter = (token) => token.filePath.endsWith("core.json");
 
-const generateFilesArr = (tokensCategories, theme) => {
+// filters tokens by attributes.category (first key in the token hierachy, see attributes/cti transform for more info)
+// must match per component name, in this repository we currently only have "button"
+const componentFilter = (cat) => (token) => token.attributes.category === cat;
+
+// for each component (currently only button), filter those specific component tokens and output them
+// to the component folder where the component source code will live
+const generateComponentFiles = (tokensCategories, theme) => {
   return tokensCategories.map((cat) => ({
-    filter: tokenFilter(cat),
+    filter: componentFilter(cat),
     destination: `${cat}/${cat}-${theme.toLowerCase()}.css`,
     format: "css/variables",
     options: {
@@ -40,7 +47,16 @@ async function run() {
     platforms: {
       css: {
         transformGroup: "custom/tokens-studio",
-        files: generateFilesArr(["button"], theme.name),
+        files: [
+          // core/semantic tokens, e.g. for application developer
+          {
+            destination: "style.css",
+            format: "css/variables",
+            filter: coreFilter,
+          },
+          // component tokens, e.g. for design system developer
+          ...generateComponentFiles(["button"], theme.name),
+        ],
       },
     },
   }));
