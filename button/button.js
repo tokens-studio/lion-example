@@ -8,6 +8,7 @@ class TokButton extends adjustAdoptedStylesheetsMixin(LionButtonSubmit) {
       ...super.styles,
       css`
         :host {
+          color: var(--button-text-color);
           background: var(--button-bg-color);
           border-radius: var(--button-border-radius);
         }
@@ -24,6 +25,16 @@ class TokButton extends adjustAdoptedStylesheetsMixin(LionButtonSubmit) {
   constructor() {
     super();
     this.component = "button";
+
+    // This can probably be its own mixin as well...
+    import(`./button.css`, {
+      assert: { type: "css" },
+    }).then(({ default: sheet }) => {
+      this.shadowRoot.adoptedStyleSheets = [
+        ...this.shadowRoot.adoptedStyleSheets,
+        sheet,
+      ];
+    });
   }
 }
 

@@ -9,6 +9,12 @@
     "borderRadius": {
       "value": "{borderRadius.default}",
       "type": "borderRadius"
+    },
+    "text": {
+      "color": {
+        "value": "{text.primary.color}",
+        "type": "color"
+      }
     }
   }
 }

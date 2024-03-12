@@ -4,7 +4,8 @@
     "name": "Casual-Green",
     "selectedTokenSets": {
       "core": "source",
-      "button": "enabled",
+      "button": "source",
+      "semantic": "source",
       "casual": "enabled",
       "green": "enabled"
     },
@@ -15,7 +16,8 @@
     "name": "Casual-Blue",
     "selectedTokenSets": {
       "core": "source",
-      "button": "enabled",
+      "button": "source",
+      "semantic": "source",
       "casual": "enabled",
       "blue": "enabled"
     },
@@ -26,7 +28,8 @@
     "name": "Casual-Purple",
     "selectedTokenSets": {
       "core": "source",
-      "button": "enabled",
+      "button": "source",
+      "semantic": "source",
       "casual": "enabled",
       "purple": "enabled"
     },
@@ -37,7 +40,8 @@
     "name": "Business-Green",
     "selectedTokenSets": {
       "core": "source",
-      "button": "enabled",
+      "button": "source",
+      "semantic": "source",
       "business": "enabled",
       "green": "enabled"
     },
@@ -48,7 +52,8 @@
     "name": "Business-Blue",
     "selectedTokenSets": {
       "core": "source",
-      "button": "enabled",
+      "button": "source",
+      "semantic": "source",
       "business": "enabled",
       "blue": "enabled"
     },
@@ -59,7 +64,8 @@
     "name": "Business-Purple",
     "selectedTokenSets": {
       "core": "source",
-      "button": "enabled",
+      "button": "source",
+      "semantic": "source",
       "business": "enabled",
       "purple": "enabled"
     },
