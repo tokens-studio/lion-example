@@ -10,17 +10,18 @@ const commonFileOptions = {
 
 export const generateSemanticFiles = (components, theme) => {
   const filesArr = [];
-  // not theme specific outputs
-  filesArr.push({
-    ...commonFileOptions,
-    filter: semanticFilter(components, false),
-    destination: `styles/semantic.css`,
-  });
-
+  // theme-specific outputs
   filesArr.push({
     ...commonFileOptions,
     filter: semanticFilter(components, true),
     destination: `styles/semantic-${theme.toLowerCase()}.css`,
+  });
+
+  // not theme-specific outputs
+  filesArr.push({
+    ...commonFileOptions,
+    filter: semanticFilter(components, false),
+    destination: `styles/semantic.css`,
   });
 
   return filesArr;
@@ -32,14 +33,14 @@ export const generateComponentFiles = (components, theme) => {
   const filesArr = [];
 
   for (const comp of components) {
-    // theme specific outputs
+    // theme-specific outputs
     filesArr.push({
       ...commonFileOptions,
       filter: componentFilter(comp, true),
       destination: `${comp}/${comp}-${theme.toLowerCase()}.css`,
     });
 
-    // not theme specific outputs
+    // not theme-specific outputs
     filesArr.push({
       ...commonFileOptions,
       filter: componentFilter(comp, false),

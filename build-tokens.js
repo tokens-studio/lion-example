@@ -15,9 +15,25 @@ const components = ["button"];
 
 async function run() {
   const $themes = JSON.parse(await promises.readFile("tokens/$themes.json"));
+  // collect all tokensets for all themes and dedupe
+  const tokensets = [
+    ...new Set(
+      $themes.reduce(
+        (acc, theme) => [...acc, ...Object.keys(theme.selectedTokenSets)],
+        []
+      )
+    ),
+  ];
+  // figure out which tokensets are theme-specific
+  // this is determined by checking if a certain tokenset is used for EVERY theme dimension variant
+  // if it is, then it is not theme-specific
+  const themeableSets = tokensets.filter((set) => {
+    return !$themes.every((theme) =>
+      Object.keys(theme.selectedTokenSets).includes(set)
+    );
+  });
 
   const configs = $themes.map((theme) => ({
-    __theme__: theme,
     source: Object.entries(theme.selectedTokenSets)
       .filter(([, val]) => val !== "disabled")
       .map(([tokenset]) => `tokens/${tokenset}.json`),
@@ -69,7 +85,7 @@ async function run() {
           const set = token.filePath
             .replace(/^tokens\//g, "")
             .replace(/.json$/g, "");
-          return cfg.__theme__.selectedTokenSets[set] === "enabled";
+          return themeableSets.includes(set);
         }
 
         // Set token to themeable if it's part of an enabled set
