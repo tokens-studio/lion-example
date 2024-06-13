@@ -23,6 +23,10 @@ The semantic layer has tokens that change based on the theme, they refer to diff
 
 The button layer refers to either core tokens or semantic tokens, and some of those semantic tokens depend on the theme, making the button also partially theme-dependent.
 
+Lastly, there is a `$themes.json` file containing metadata about which theme dimensions exists (noted by `group` property) and which variations exist within each dimension (noted by `name` property). Each variation has a `selectedTokenSets` array property showing which tokensets are enabled for this theme variation.
+
+> The difference between "source" and "enabled" values is **not relevant** in the scope of lion-example / style-dictionary.
+
 ## Preventing redundancy
 
 It's important to note here that we want to load as few styles as possible, there should be 0 redundancy.
