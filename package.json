@@ -23,6 +23,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@web/dev-server": "^0.4.1",
     "@web/rollup-plugin-html": "^2.1.2",
+    "http-server": "^14.1.1",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.5.2",

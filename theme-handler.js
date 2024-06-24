@@ -35,7 +35,7 @@ class ThemeToggler extends LitElement {
   constructor() {
     super();
     this.color = "green";
-    this.brand = "casual";
+    this.brand = "pencs";
   }
 
   updated() {
@@ -62,8 +62,8 @@ class ThemeToggler extends LitElement {
       <label>
         Brand
         <select @change=${this.onBrandChange}>
-          <option>casual</option>
-          <option>business</option>
+          <option>pencs</option>
+          <option>ucc</option>
         </select>
       </label>
     `;

@@ -14,7 +14,7 @@ There are three layers:
 
 We have two dimensions of themes:
 
-- Brand (casual, business)
+- Brand (pencs, ucc)
 - Color (blue, green, purple)
 
 The core layer is not theme-dependent.
@@ -34,7 +34,7 @@ It's important to note here that we want to load as few styles as possible, ther
 What that means is:
 
 - if we don't load a button component on the page, no button tokens should be loaded
-- if we are in `business-purple` theme initially, no other theme-specific tokens that are not for `business-purple` should be loaded
+- if we are in `ucc-purple` theme initially, no other theme-specific tokens that are not for `ucc-purple` should be loaded
 - if we switch themes, only the tokens that change should be loaded and replace the old theme's tokens that have now become redundant
 
 By setting these rules we are targeting:
@@ -65,7 +65,7 @@ This layer is pretty simple to expose, we can just create a filter that filters 
 
 This layer is partially theme-dependent, so we have to create two outputs:
 
-- a theme-dependent CSS file e.g. `semantic-business-blue.css` which contains only the tokens that may change by theme.
+- a theme-dependent CSS file e.g. `semantic-ucc-blue.css` which contains only the tokens that may change by theme.
 - a CSS file with the semantic tokens that do not change by theme: `semantic.css`.
 
 We can repeat the above for every theme permutation. The application developer is then responsible for always loading the `semantic.css` and conditionally loading the theme-specific semantic CSS file based on the current theme chosen by the end user.
@@ -74,7 +74,7 @@ We can repeat the above for every theme permutation. The application developer i
 
 This layer is partially theme-dependent, so we have to create two outputs:
 
-- a theme-dependent CSS file e.g. `button-business-blue.css` which contains only the tokens that may change by theme.
+- a theme-dependent CSS file e.g. `button-ucc-blue.css` which contains only the tokens that may change by theme.
 - a CSS file with the component tokens that do not change by theme: `button.css`.
 
 We can repeat the above for every theme permutation as well as for every component that we have. The design system developer is then responsible for always loading the `button.css` as a dependency of the Button component, and conditionally loading the theme-specific button CSS file based on the current theme chosen by the end user.

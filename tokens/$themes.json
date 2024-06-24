@@ -1,23 +1,23 @@
 [
   {
     "id": "kjhrawkher8923487fhdfhkjw398fhsjr2973rhf",
-    "name": "Casual",
+    "name": "pencs",
     "selectedTokenSets": {
       "core": "source",
       "button": "source",
       "semantic": "source",
-      "casual": "enabled"
+      "pencs": "enabled"
     },
     "group": "brand"
   },
   {
     "id": "hjk437bhd83hfhfsf8092hamnskiu32800csjjlka",
-    "name": "Business",
+    "name": "ucc",
     "selectedTokenSets": {
       "core": "source",
       "button": "source",
       "semantic": "source",
-      "business": "enabled"
+      "ucc": "enabled"
     },
     "group": "brand"
   },
