@@ -8,7 +8,7 @@
         }
       }
     },
-    "fg": {
+    "text": {
       "default": {
         "color": {
           "value": "{colors.black}",
