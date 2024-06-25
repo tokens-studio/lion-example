@@ -3,6 +3,6 @@
  */
 
 :host {
-  --border-radius-default: 8px;
-  --colors-bg-default-color: #3182ce;
+  --border-radius-default: 4px;
+  --colors-bg-default-color: #0058D5;
 }

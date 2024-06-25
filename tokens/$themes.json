@@ -23,12 +23,12 @@
   },
   {
     "id": "ff04d8b99db8cddbaaceac800e10e106118ccdcf",
-    "name": "Green",
+    "name": "gray",
     "selectedTokenSets": {
       "core": "source",
       "button": "source",
       "semantic": "source",
-      "green": "enabled"
+      "gray": "enabled"
     },
     "group": "color"
   },
@@ -45,12 +45,12 @@
   },
   {
     "id": "a9dc2652a4c8db0771643fdf7fe49da5371e701f",
-    "name": "Purple",
+    "name": "white",
     "selectedTokenSets": {
       "core": "source",
       "button": "source",
       "semantic": "source",
-      "purple": "enabled"
+      "white": "enabled"
     },
     "group": "color"
   }

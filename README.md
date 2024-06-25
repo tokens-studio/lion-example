@@ -15,7 +15,7 @@ There are three layers:
 We have two dimensions of themes:
 
 - Brand (pencs, ucc)
-- Color (blue, green, purple)
+- Color (blue, gray, white)
 
 The core layer is not theme-dependent.
 
@@ -34,7 +34,7 @@ It's important to note here that we want to load as few styles as possible, ther
 What that means is:
 
 - if we don't load a button component on the page, no button tokens should be loaded
-- if we are in `ucc-purple` theme initially, no other theme-specific tokens that are not for `ucc-purple` should be loaded
+- if we are in `ucc-white` theme initially, no other theme-specific tokens that are not for `ucc-white` should be loaded
 - if we switch themes, only the tokens that change should be loaded and replace the old theme's tokens that have now become redundant
 
 By setting these rules we are targeting:

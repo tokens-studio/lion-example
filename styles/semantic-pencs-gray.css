@@ -3,6 +3,6 @@
  */
 
 :host {
-  --button-bg-color: #805ad5;
-  --button-border-radius: 4px;
+  --border-radius-default: 4px;
+  --colors-bg-default-color: #E0E1E2;
 }
