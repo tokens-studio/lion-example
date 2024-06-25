@@ -5,5 +5,5 @@
 :host {
   --border-radius-default: 0;
   --colors-bg-default-color: #0046aa;
-  --colors-fg-default-color: #ffffff;
+  --colors-text-default-color: #ffffff;
 }

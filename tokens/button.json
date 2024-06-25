@@ -12,7 +12,7 @@
     },
     "text": {
       "color": {
-        "value": "{colors.text.default.color}",
+        "value": "{text.primary.color}",
         "type": "color"
       }
     }
