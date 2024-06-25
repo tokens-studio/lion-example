@@ -4,6 +4,6 @@
 
 :host {
   --button-bg-color: #b2b4b6;
-  --button-fg-color: #2b2d2e;
   --button-border-radius: 4px;
+  --button-text-color: #2b2d2e;
 }

@@ -5,6 +5,12 @@
         "value": "{colors.white}",
         "type": "color"
       }
+    },
+    "secondary": {
+      "color": {
+        "value": "{colors.black}",
+        "type": "color"
+      }
     }
   }
 }

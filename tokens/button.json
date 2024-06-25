@@ -6,15 +6,15 @@
         "type": "color"
       }
     },
-    "fg": {
+    "borderRadius": {
+      "value": "{borderRadius.default}",
+      "type": "borderRadius"
+    },
+    "text": {
       "color": {
         "value": "{colors.fg.default.color}",
         "type": "color"
       }
-    },
-    "borderRadius": {
-      "value": "{borderRadius.default}",
-      "type": "borderRadius"
     }
   }
 }
