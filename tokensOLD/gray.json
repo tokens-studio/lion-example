@@ -7,14 +7,6 @@
           "type": "color"
         }
       }
-    },
-    "fg": {
-      "default": {
-        "color": {
-          "value": "{colors.gray.900}",
-          "type": "color"
-        }
-      }
     }
   }
 }

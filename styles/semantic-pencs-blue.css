@@ -4,5 +4,6 @@
 
 :host {
   --border-radius-default: 4px;
-  --colors-bg-default-color: #0058D5;
+  --colors-bg-default-color: #0046aa;
+  --colors-fg-default-color: #ffffff;
 }

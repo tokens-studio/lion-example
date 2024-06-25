@@ -3,14 +3,6 @@
     "bg": {
       "default": {
         "color": {
-          "value": "{colors.blue.600}",
-          "type": "color"
-        }
-      }
-    },
-    "fg": {
-      "default": {
-        "color": {
           "value": "{colors.white}",
           "type": "color"
         }
