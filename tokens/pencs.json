@@ -4,5 +4,11 @@
       "value": "{borderRadius.md}",
       "type": "borderRadius"
     }
+  },
+  "borders": {
+    "default": {
+      "value": "{borders.md}",
+      "type": "border"
+    }
   }
 }

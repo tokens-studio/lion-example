@@ -15,6 +15,10 @@
         "value": "{colors.text.default.color}",
         "type": "color"
       }
+    },
+    "border": {
+      "value": "{borders.default}",
+      "type": "border"
     }
   }
 }

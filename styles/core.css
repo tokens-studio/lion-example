@@ -3,6 +3,7 @@
  */
 
 :root {
+  --borders-md: 1px solid #b2b4b6;
   --border-radius-md: 4px;
   --border-radius-lg: 8px;
   --border-radius-none: 0;

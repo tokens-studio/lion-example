@@ -1,4 +1,14 @@
 {
+  "borders": {
+    "md": {
+      "value": {
+        "color": "{colors.gray.600}",
+        "width": "1",
+        "style": "solid"
+      },
+      "type": "border"
+    }
+  },
   "borderRadius": {
     "md": {
       "value": "4",
@@ -57,6 +67,44 @@
       },
       "900": {
         "value": "#2b2d2e",
+        "type": "color"
+      }
+    },
+    "sky": {
+      "100": {
+        "value": "#c4dcff",
+        "type": "color"
+      },
+      "200": {
+        "value": "#88b9ff",
+        "type": "color"
+      },
+      "300": {
+        "value": "#4d96ff",
+        "type": "color"
+      },
+      "400": {
+        "value": "#1174ff",
+        "type": "color"
+      },
+      "500": {
+        "value": "#0058d5",
+        "type": "color"
+      },
+      "600": {
+        "value": "#0046aa",
+        "type": "color"
+      },
+      "700": {
+        "value": "#003580",
+        "type": "color"
+      },
+      "800": {
+        "value": "#002355",
+        "type": "color"
+      },
+      "900": {
+        "value": "#00122b",
         "type": "color"
       }
     },
