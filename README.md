@@ -14,7 +14,7 @@ There are three layers:
 
 We have two dimensions of themes:
 
-- Brand (pencs, ucc)
+- Brand (pc, ucc)
 - Color (blue, gray, white)
 
 The core layer is not theme-dependent.

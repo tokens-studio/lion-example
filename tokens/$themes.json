@@ -1,12 +1,12 @@
 [
   {
     "id": "kjhrawkher8923487fhdfhkjw398fhsjr2973rhf",
-    "name": "pencs",
+    "name": "pc",
     "selectedTokenSets": {
       "core": "source",
       "button": "source",
       "semantic": "source",
-      "pencs": "enabled"
+      "pc": "enabled"
     },
     "group": "brand"
   },
