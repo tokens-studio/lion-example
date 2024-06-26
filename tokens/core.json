@@ -72,39 +72,39 @@
     },
     "sky": {
       "100": {
-        "value": "#c4dcff",
+        "value": "#cce5f1",
         "type": "color"
       },
       "200": {
-        "value": "#88b9ff",
+        "value": "#99cbe3",
         "type": "color"
       },
       "300": {
-        "value": "#4d96ff",
+        "value": "#66b1d5",
         "type": "color"
       },
       "400": {
-        "value": "#1174ff",
+        "value": "#3696c4",
         "type": "color"
       },
       "500": {
-        "value": "#0058d5",
+        "value": "#286f91",
         "type": "color"
       },
       "600": {
-        "value": "#0046aa",
+        "value": "#1a485e",
         "type": "color"
       },
       "700": {
-        "value": "#003580",
+        "value": "#133647",
         "type": "color"
       },
       "800": {
-        "value": "#002355",
+        "value": "#0d242f",
         "type": "color"
       },
       "900": {
-        "value": "#00122b",
+        "value": "#061218",
         "type": "color"
       }
     },
