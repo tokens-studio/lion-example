@@ -1,23 +1,20 @@
 import StyleDictionary from "style-dictionary";
 import { getReferences, usesReferences } from "style-dictionary/utils";
-import {
-  registerTransforms,
-  permutateThemes,
-} from "@tokens-studio/sd-transforms";
-import { promises } from "node:fs";
+import { register, permutateThemes } from "@tokens-studio/sd-transforms";
+import fs from "node:fs/promises";
 import { coreFilter } from "./sd-filters.js";
 import {
   generateSemanticFiles,
   generateComponentFiles,
 } from "./sd-file-generators.js";
 
-registerTransforms(StyleDictionary);
+register(StyleDictionary);
 
 // list of components that we have tokens for, assume the tokenset path for it is tokens/${comp}.json
 const components = ["button"];
 
 async function run() {
-  const $themes = JSON.parse(await promises.readFile("tokens/$themes.json"));
+  const $themes = JSON.parse(await fs.readFile("tokens/$themes.json"));
   const themes = permutateThemes($themes);
   // collect all tokensets for all themes and dedupe
   const tokensets = [
@@ -34,6 +31,7 @@ async function run() {
 
   const configs = Object.entries(themes).map(([theme, sets]) => ({
     source: sets.map((tokenset) => `tokens/${tokenset}.json`),
+    preprocessors: ["tokens-studio"],
     platforms: {
       css: {
         transformGroup: "tokens-studio",

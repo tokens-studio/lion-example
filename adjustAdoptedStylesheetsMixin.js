@@ -16,7 +16,7 @@ export const adjustAdoptedStylesheetsMixin = (superclass) =>
       const { default: sheet } = await import(
         `./${this.component}/${this.component}-${brand}-${color}.css`,
         {
-          assert: { type: "css" },
+          with: { type: "css" },
         }
       );
 

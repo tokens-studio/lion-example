@@ -28,7 +28,7 @@ class TokButton extends adjustAdoptedStylesheetsMixin(LionButtonSubmit) {
 
     // This can probably be its own mixin as well...
     import(`./button.css`, {
-      assert: { type: "css" },
+      with: { type: "css" },
     }).then(({ default: sheet }) => {
       this.shadowRoot.adoptedStyleSheets = [
         ...this.shadowRoot.adoptedStyleSheets,
