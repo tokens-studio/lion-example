@@ -4,14 +4,14 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "node build-tokens.js",
-    "demo:dev": "wds --open --watch --node-resolve",
+    "build": "node export-tokens/build.js",
+    "demo:dev": "wds --open --watch --node-resolve --app-index app/index.html",
     "demo:build": "rimraf dist && rollup -c rollup.config.js",
     "demo:start": "http-server -o -c-1 dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@lion/ui": "^0.7.7",
     "@tokens-studio/sd-transforms": "^1.2.5",
