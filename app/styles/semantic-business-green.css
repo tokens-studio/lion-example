@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:host {
-  --border-radius-default: 8px;
+:root {
   --colors-bg-default-color: #38a169;
+  --border-radius-default: 0;
 }

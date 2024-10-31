@@ -39,14 +39,7 @@ class ThemeToggler extends LitElement {
   }
 
   updated() {
-    // adjustAdoptedStylesheetsMixin responds to this event
-    // by dynamically importing the right stylesheet and applying it
-    // to the host's shadowRoot adoptedStyleSheets
-    this.dispatchEvent(
-      new CustomEvent("theme-change", {
-        detail: { brand: this.brand, color: this.color },
-      })
-    );
+    this.updateTheme();
   }
 
   render() {
@@ -67,6 +60,21 @@ class ThemeToggler extends LitElement {
         </select>
       </label>
     `;
+  }
+
+  async updateTheme() {
+    const { default: sheet } = await import(
+      `./styles/semantic-${this.brand}-${this.color}.css`,
+      {
+        with: { type: "css" },
+      }
+    );
+
+    sheet.theme = true;
+    document.adoptedStyleSheets = [
+      ...document.adoptedStyleSheets.filter((sheet) => !sheet.theme),
+      sheet,
+    ];
   }
 
   onColorChange(ev) {

@@ -3,10 +3,11 @@
     "id": "kjhrawkher8923487fhdfhkjw398fhsjr2973rhf",
     "name": "Casual",
     "selectedTokenSets": {
-      "core": "source",
-      "button": "source",
-      "semantic": "source",
-      "casual": "enabled"
+      "primitive/colors": "source",
+      "primitive/radii": "source",
+      "semantic/typography": "source",
+      "component/button": "source",
+      "brand/casual": "enabled"
     },
     "group": "brand"
   },
@@ -14,10 +15,11 @@
     "id": "hjk437bhd83hfhfsf8092hamnskiu32800csjjlka",
     "name": "Business",
     "selectedTokenSets": {
-      "core": "source",
-      "button": "source",
-      "semantic": "source",
-      "business": "enabled"
+      "primitive/colors": "source",
+      "primitive/radii": "source",
+      "semantic/typography": "source",
+      "component/button": "source",
+      "brand/business": "enabled"
     },
     "group": "brand"
   },
@@ -25,10 +27,11 @@
     "id": "ff04d8b99db8cddbaaceac800e10e106118ccdcf",
     "name": "Green",
     "selectedTokenSets": {
-      "core": "source",
-      "button": "source",
-      "semantic": "source",
-      "green": "enabled"
+      "primitive/colors": "source",
+      "primitive/radii": "source",
+      "semantic/typography": "source",
+      "component/button": "source",
+      "color/green": "enabled"
     },
     "group": "color"
   },
@@ -36,10 +39,11 @@
     "id": "e6dd916d4cb30ccace7631035ac91c98ea5960eb",
     "name": "Blue",
     "selectedTokenSets": {
-      "core": "source",
-      "button": "source",
-      "semantic": "source",
-      "blue": "enabled"
+      "primitive/colors": "source",
+      "primitive/radii": "source",
+      "semantic/typography": "source",
+      "component/button": "source",
+      "color/blue": "enabled"
     },
     "group": "color"
   },
@@ -47,10 +51,11 @@
     "id": "a9dc2652a4c8db0771643fdf7fe49da5371e701f",
     "name": "Purple",
     "selectedTokenSets": {
-      "core": "source",
-      "button": "source",
-      "semantic": "source",
-      "purple": "enabled"
+      "primitive/colors": "source",
+      "primitive/radii": "source",
+      "semantic/typography": "source",
+      "component/button": "source",
+      "color/purple": "enabled"
     },
     "group": "color"
   }

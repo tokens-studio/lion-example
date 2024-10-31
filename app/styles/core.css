@@ -3,8 +3,6 @@
  */
 
 :root {
-  --border-radius-lg: 8px;
-  --border-radius-none: 0;
   --colors-black: #000000;
   --colors-white: #ffffff;
   --colors-gray-100: #f7fafc;
@@ -43,4 +41,6 @@
   --colors-purple-700: #6b46c1;
   --colors-purple-800: #553c9a;
   --colors-purple-900: #44337a;
+  --border-radius-lg: 8px;
+  --border-radius-none: 0;
 }

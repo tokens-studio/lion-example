@@ -2,8 +2,8 @@ import StyleDictionary from "style-dictionary";
 import { getReferences, usesReferences } from "style-dictionary/utils";
 import { register, permutateThemes } from "@tokens-studio/sd-transforms";
 import fs from "node:fs/promises";
-import { coreFilter } from "./sd-filters.js";
 import {
+  generateCoreFiles,
   generateSemanticFiles,
   generateComponentFiles,
 } from "./sd-file-generators.js";
@@ -37,16 +37,12 @@ async function run() {
         transformGroup: "tokens-studio",
         transforms: ["attribute/themeable", "name/kebab"],
         files: [
-          // core tokens, e.g. for application developer
-          {
-            destination: "styles/core.css",
-            format: "css/variables",
-            filter: coreFilter,
-          },
+          // core tokens, e.g. for application developer, although in this project we don't really use core tokens directly, which is common
+          ...generateCoreFiles(),
           // semantic tokens, e.g. for application developer
-          ...generateSemanticFiles(components, theme),
+          ...generateSemanticFiles(theme),
           // component tokens, e.g. for design system developer
-          ...generateComponentFiles(components, theme),
+          ...generateComponentFiles(components),
         ],
       },
     },

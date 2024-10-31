@@ -1,0 +1,9 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:host {
+  --button-bg-color: var(--colors-bg-default-color);
+  --button-border-radius: var(--border-radius-default);
+  --button-text-color: var(--text-primary-color);
+}

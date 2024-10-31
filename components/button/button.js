@@ -1,11 +1,12 @@
 import { LionButtonSubmit } from "@lion/ui/button.js";
 import { css } from "lit";
-import { adjustAdoptedStylesheetsMixin } from "../adjustAdoptedStylesheetsMixin.js";
+import tokens from "./button.css" with { type: "css" };
 
-class TokButton extends adjustAdoptedStylesheetsMixin(LionButtonSubmit) {
+class TokButton extends LionButtonSubmit {
   static get styles() {
     return [
       ...super.styles,
+      tokens,
       css`
         :host {
           color: var(--button-text-color);
@@ -20,21 +21,6 @@ class TokButton extends adjustAdoptedStylesheetsMixin(LionButtonSubmit) {
         }
       `,
     ];
-  }
-
-  constructor() {
-    super();
-    this.component = "button";
-
-    // This can probably be its own mixin as well...
-    import(`./button.css`, {
-      with: { type: "css" },
-    }).then(({ default: sheet }) => {
-      this.shadowRoot.adoptedStyleSheets = [
-        ...this.shadowRoot.adoptedStyleSheets,
-        sheet,
-      ];
-    });
   }
 }
 
