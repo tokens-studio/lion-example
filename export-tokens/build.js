@@ -2,6 +2,7 @@ import StyleDictionary from "style-dictionary";
 import { getReferences, usesReferences } from "style-dictionary/utils";
 import { register, permutateThemes } from "@tokens-studio/sd-transforms";
 import fs from "node:fs/promises";
+import path from "node:path";
 import {
   generateCoreFiles,
   generateSemanticFiles,
@@ -10,11 +11,12 @@ import {
 
 register(StyleDictionary);
 
-// list of components that we have tokens for, assume the tokenset path for it is tokens/${comp}.json
+const tokenFolder = "tokens";
+// list of components that we have tokens for, assume the tokenset path for it is component/${comp}.json
 const components = ["button"];
 
 async function run() {
-  const $themes = JSON.parse(await fs.readFile("tokens/$themes.json"));
+  const $themes = JSON.parse(await fs.readFile(`${tokenFolder}/$themes.json`));
   const themes = permutateThemes($themes);
   // collect all tokensets for all themes and dedupe
   const tokensets = [
@@ -26,11 +28,13 @@ async function run() {
   // this is determined by checking if a certain tokenset is used for EVERY theme dimension variant
   // if it is, then it is not theme-specific
   const themeableSets = tokensets.filter((set) => {
-    return !Object.values(themes).every((sets) => sets.includes(set));
+    return !Object.keys(
+      $themes.find((t) => t.name === "_" && t.group === "_").selectedTokenSets
+    ).includes(set);
   });
 
   const configs = Object.entries(themes).map(([theme, sets]) => ({
-    source: sets.map((tokenset) => `tokens/${tokenset}.json`),
+    source: sets.map((tokenset) => `${tokenFolder}/${tokenset}.json`),
     preprocessors: ["tokens-studio"],
     platforms: {
       css: {
@@ -38,11 +42,11 @@ async function run() {
         transforms: ["attribute/themeable", "name/kebab"],
         files: [
           // core tokens, e.g. for application developer, although in this project we don't really use core tokens directly, which is common
-          ...generateCoreFiles(),
+          ...generateCoreFiles(tokenFolder),
           // semantic tokens, e.g. for application developer
-          ...generateSemanticFiles(theme),
+          ...generateSemanticFiles(theme.replace(/^_-/g, ""), tokenFolder),
           // component tokens, e.g. for design system developer
-          ...generateComponentFiles(components),
+          ...generateComponentFiles(components, tokenFolder),
         ],
       },
     },
@@ -56,6 +60,7 @@ async function run() {
      * due to Tokens Studio theming.
      * Any tokenset from Tokens Studio marked as "enabled" in the $themes.json is considered
      * a set in which any token could change if the theme changes.
+     *
      * Any token that is inside such a set or is a reference with a token in that reference chain
      * that is inside such a set, is considered "themeable",
      * which means it could change by theme switching.
@@ -68,10 +73,9 @@ async function run() {
       type: "attribute",
       transform: (token) => {
         function isPartOfEnabledSet(token) {
-          const set = token.filePath
-            .replace(/^tokens\//g, "")
-            .replace(/.json$/g, "");
-          return themeableSets.includes(set);
+          const { dir, name } = path.parse(token.filePath);
+          const tokenPath = `${dir.split(`${tokenFolder}/`)[1]}/${name}`;
+          return themeableSets.includes(tokenPath);
         }
 
         // Set token to themeable if it's part of an enabled set
@@ -84,7 +88,7 @@ async function run() {
         // Set token to themeable if it's using a reference and inside the reference chain
         // any one of them is from a themeable set
         if (usesReferences(token.original.value)) {
-          const refs = getReferences(token.original.value, sd.tokens);
+          const refs = getReferences(token.original.value, sd.tokenMap);
           if (refs.some((ref) => isPartOfEnabledSet(ref))) {
             return {
               themeable: true,
