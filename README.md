@@ -1,5 +1,7 @@
 # Lion Example
 
+[Live demo](https://lion-example.netlify.app/)
+
 Example Web Component using Design Tokens.
 
 Used Lion/Lit because it's a fairly simple run-time-only base layer that is close to the platform, so this example will be easy to abstract and apply to any framework (e.g. React).
